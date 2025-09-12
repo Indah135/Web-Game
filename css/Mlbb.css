@@ -3,53 +3,50 @@
 html {
   height:100%;
 }
+
 nav {
-  max-width: 1100px;
-  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
-  margin: 0 auto;
-}
-nav ul {
-  text-align: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-}
-nav ul li {
-  display: inline-block;
-}
-nav ul li a {
-  padding: 18px;
-  font-family: "Open Sans";
-  text-transform:uppercase;
-  color: rgba(0, 35, 122, 0.5);
-  font-size: 18px;
+   text-align: right;
   text-decoration: none;
-  display: block;
-}
-nav ul li a:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(0, 35, 122, 0.7);
+  padding: 18px;
+  font-size: 18px;
+} 
+
+nav a{
+  max-width: 1100px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgba(167, 164, 164, 0.5);
+  margin: 0 10px;
+  font-family: "Open Sans";
+  text-shadow: 1px 1px 2px black;
+   transition: color 0.3s ease;
 }
 
 /* style utama */
 body {
-  background: radial-gradient(circle,rgba(30, 170, 230, 1) 0%, rgba(3, 7, 69, 1) 92%);
+  background: url("/img/background.jpeg") no-repeat center center fixed; 
+  background-size: cover;              
   font-family: "Open Sans";
   color: white;
   text-align: justify
 }
-.logo-kiri img {
-    width: 150px;     
-    position: absolute;
-    top: 10px;
-    left: 10px;
+
+.logo {
+  position: fixed;          /* selalu di tengah layar, ikut scroll */
+  top: 50%;                 /* posisi vertikal tengah */
+  left: 50%;                /* posisi horizontal tengah */
+  transform: translate(-50%, -50%);
+  z-index: -1;               /* biar di belakang konten lain */
+  opacity: 0.3;            /* lebih transparan biar ga ganggu */
+  filter: blur(px);
+  pointer-events: none;     /* biar ga bisa diklik, klik tembus ke konten */
 }
-.logo-kanan img {
-    width: 150px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+
+.logo img {
+  width: 1000px;   /* kecilin ukuran */
+  height: auto;
 }
+
 .lane{
   display: flex;
   justify-content: center;
