@@ -1,25 +1,79 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 html {
   height:100%;
 }
 
 nav {
-   text-align: right;
-  text-decoration: none;
-  padding: 18px;
-  font-size: 18px;
-} 
+  top: 20px;
+  right: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;              /* kasih jarak antar menu */
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3); /* kasih background transparan biar kontras */
+  padding: 10px 20px;
+  border-radius: 8px;     /* sudut membulat */
+  backdrop-filter: blur(6px); /* efek blur kaca */
+}
 
-nav a{
-  max-width: 1100px;
-  font-weight: bold;
+nav a {
+  color: #f6f4e6;
   text-decoration: none;
-  color: rgba(167, 164, 164, 0.5);
-  margin: 0 10px;
-  font-family: "Open Sans";
-  text-shadow: 1px 1px 2px black;
-   transition: color 0.3s ease;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fddb3a;
+}
+
+
+nav .dot {
+  width: 6px;
+  height: 6px;
+  background: #fddb3a;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+nav a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(110px);
+  transform: translateX(110px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+nav a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+nav a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(285px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
 /* style utama */
