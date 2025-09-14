@@ -6,15 +6,13 @@ html {
 }
 
 nav {
-  top: 20px;
-  right: 40px;
   display: flex;
   justify-content: flex-end;
-  gap: 30px;              /* kasih jarak antar menu */
+  gap: 35px;              /* kasih jarak antar menu */
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.3); /* kasih background transparan biar kontras */
-  padding: 10px 20px;
-  border-radius: 8px;     /* sudut membulat */
+  background: rgba(0, 0, 0, 0.5); /* kasih background transparan biar kontras */
+  padding: 20px 100px;
+  border-radius: 2px;     /* sudut membulat */
   backdrop-filter: blur(6px); /* efek blur kaca */
 }
 
