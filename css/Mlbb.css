@@ -29,51 +29,6 @@ nav a:hover {
   color: #fddb3a;
 }
 
-
-nav .dot {
-  width: 6px;
-  height: 6px;
-  background: #fddb3a;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-nav a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-nav a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(110px);
-  transform: translateX(110px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-nav a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translateX(200px);
-  transform: translateX(200px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
-nav a:nth-child(4):hover ~ .dot {
-  -webkit-transform: translateX(285px);
-  transform: translateX(285px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
 /* style utama */
 body {
   background: url("/img/background.jpeg") no-repeat center center fixed; 
@@ -103,7 +58,20 @@ body {
   display: flex;
   justify-content: center;
   gap: 100px; 
-  margin-top: 30px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.lane img {
+  width: 120px; 
+  animation: float 2.5s ease-in-out infinite;
+}
+
+/* Animasi floating */
+@keyframes float {
+  0%   { transform: translateY(2px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(2px); }
 }
 
 /* style css lane MLBB */
