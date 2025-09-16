@@ -36,6 +36,12 @@ body {
   font-family: "Open Sans";
   color: white;
   text-align: justify
+  
+}
+
+.text {
+  padding: 0 20px;  /* jarak kiri-kanan */
+  text-align: justify; /* bisa diganti left kalau lebih enak dibaca */
 }
 
 .logo {
